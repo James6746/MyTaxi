@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    android:background="@drawable/card_ripple"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="12dp"
+    app:strokeColor="#F0F0F0"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/departure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivFromIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/ic_circle_from" />
+
+            <TextView
+                android:id="@+id/tvDeparturePoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/lato"
+                android:maxLines="2"
+                android:paddingEnd="40dp"
+                android:text="Яшнабадский район, улица Sharof Rashidov, Ташкент"
+                android:textColor="#434343"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/arrival"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/departure">
+
+            <ImageView
+                android:id="@+id/ivToIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/ic_circle_to" />
+
+            <TextView
+                android:id="@+id/tvDestination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/lato"
+                android:maxLines="2"
+                android:paddingEnd="40dp"
+                android:text="Юнусабадский район, м-в юнусабад-19, ул. дехканабад, 17"
+                android:textColor="#434343"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:id="@+id/viewBottom"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="16dp"
+            android:background="#F8F8F8"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/arrival" />
+
+        <TextView
+            android:id="@+id/tvTimeAndCost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/lato"
+            android:text="21:36 · 12 900 cум"
+            android:textColor="#434343"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/viewBottom"
+            app:layout_constraintStart_toStartOf="@id/viewBottom"
+            app:layout_constraintTop_toTopOf="@id/viewBottom" />
+
+        <ImageView
+            android:id="@+id/ivRideType"
+            android:layout_width="108dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="-8dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintEnd_toEndOf="@id/viewBottom"
+            app:layout_constraintTop_toTopOf="@id/viewBottom" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/rideLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/card_ripple"
+        android:clickable="true"
+        android:focusable="true" />
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <group
+        android:id="@+id/rides"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_rides"
+            android:icon="@drawable/direction"
+            android:title="Мои поездки" />
+    </group>
+
+    <group
+        android:id="@+id/payment"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_payment"
+            android:icon="@drawable/wallet"
+            android:title="Способы оплаты " />
+
+    </group>
+    <group
+        android:id="@+id/favourite"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_favourite"
+            android:icon="@drawable/star"
+            android:title="Избранные адреса" />
+    </group>
+</menu>
